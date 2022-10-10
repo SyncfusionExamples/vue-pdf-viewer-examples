@@ -55,7 +55,7 @@ export default {
 };
 </script>
 
-//Add the Vue PDF Viewer by using the <ejs-pdfviewer> selector in <template> section.
+{/*Template to render PDF viewer*/}
 <template>
   <h3>PDF Viewer</h3>
   <button id="set">DeleteAnnotation</button>
@@ -63,8 +63,8 @@ export default {
   <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :serviceUrl="serviceUrl" :documentPath="documentPath" :documentLoad="documentLoad"> </ejs-pdfviewer>
 </template>
 
+{/*Material theme used for this sample*/}
 <style>
-<!-- Material theme used for this sample -->
 @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
 @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
