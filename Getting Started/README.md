@@ -1,4 +1,4 @@
-# quickstart
+# Getting Started
 
 > A Vue.js project
 
