@@ -1,4 +1,4 @@
-# quickstart
+# Getting Started Vue3
 
 ## Project setup
 ```
