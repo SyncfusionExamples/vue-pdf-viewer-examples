@@ -1,62 +1,67 @@
-<script>
-import { 
-  PdfViewerComponent, 
-  Toolbar, 
-  Magnification, 
-  Navigation, 
-  LinkAnnotation, 
-  BookmarkView, 
-  ThumbnailView, 
-  Print, 
-  TextSelection, 
-  TextSearch, 
-  Annotation, 
-  FormDesigner, 
-  FormFields } from '@syncfusion/ej2-vue-pdfviewer';
-var viewer;
-export default {
-  name: "App",
-  components: {
-    "ejs-pdfviewer": PdfViewerComponent
-  },
-  data() {
-    return {
-        //Sets the PDF document path for initial loading.
-        serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
-        documentPath:'PDF_Succinctly.pdf',
-    };
-  },
-  provide: {
-    PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields]
-  }
-};
-</script>
-
-{/*Template to render PDF viewer*/}
 <template>
-  <h3>PDF Viewer</h3>
-  <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :serviceUrl="serviceUrl" :documentPath="documentPath" :documentLoad="documentLoad"> </ejs-pdfviewer>
+  <div id="app">
+    <ejs-pdfviewer
+      id="pdfViewer"
+      :serviceUrl="serviceUrl"
+      :documentPath="documentPath"
+    >
+    </ejs-pdfviewer>
+  </div>
 </template>
 
-{/*Material theme used for this sample*/}
+<script>
+  import Vue from 'vue';
+  import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+  Vue.use(PdfViewerPlugin);
+  export default {
+    name: 'app',
+    data() {
+      return {
+        serviceUrl: "https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+        documentPath: "PDF_Succinctly.pdf"
+      };
+    },
+    provide: {
+      PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner]
+    }
+  }
+</script>
+
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-vue-pdfviewer/styles/material.css';
+  @import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+  @import "../node_modules/@syncfusion/ej2-vue-pdfviewer/styles/material.css";
 
-@import "../node_modules/@syncfusion/ej2-calendars/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css";
+  #app {
+    font-family: "Avenir", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 60px;
+  }
 
-.e-tab .e-content .e-item {
-  padding: 10px;
-  text-align: justify;
-  font-size: 12px;
-}
+  h1,
+  h2 {
+    font-weight: normal;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  a {
+    color: #42b983;
+  }
 </style>
