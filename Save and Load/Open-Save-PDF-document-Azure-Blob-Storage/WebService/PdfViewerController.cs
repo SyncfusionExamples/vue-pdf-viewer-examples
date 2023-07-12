@@ -31,10 +31,10 @@ namespace PdfViewerWebService
             _logger = logger;
 
             Console.WriteLine("PdfViewerController initialized");
-    }
+        }
 
 
-    [HttpPost("Load")]
+        [HttpPost("Load")]
         [Microsoft.AspNetCore.Cors.EnableCors("MyPolicy")]
         [Route("[controller]/Load")]
         //Post action for Loading the PDF documents   
@@ -235,7 +235,6 @@ namespace PdfViewerWebService
             return this.Content("Document cache is cleared");
         }
 
-
         [HttpPost("Download")]
         [Microsoft.AspNetCore.Cors.EnableCors("MyPolicy")]
         [Route("[controller]/Download")]
@@ -246,7 +245,6 @@ namespace PdfViewerWebService
             PdfRenderer pdfviewer = new PdfRenderer(_cache);
             string documentBase = pdfviewer.GetDocumentAsBase64(jsonObject);
             string document = jsonObject["documentId"];
-            string fileName = jsonObject["hashId"];
 
             // Create a BlobServiceClient object
             BlobServiceClient blobServiceClient = new BlobServiceClient(_storageConnectionString);
@@ -254,11 +252,12 @@ namespace PdfViewerWebService
             // Get a reference to the blob container
             BlobContainerClient containerClient = blobServiceClient.GetBlobContainerClient(_storageContainerName);
 
+            string result = Path.GetFileNameWithoutExtension(document);
             // Get a reference to the blob
-            BlobClient blobClient = containerClient.GetBlobClient(document);
+            BlobClient blobClient = containerClient.GetBlobClient(result + "_download.pdf");
 
             // Convert the document base64 string to bytes
-            byte[] bytes = Convert.FromBase64String(fileName);
+            byte[] bytes = Convert.FromBase64String(documentBase.Split(",")[1]);
 
             // Upload the document to Azure Blob Storage
             using (MemoryStream stream = new MemoryStream(bytes))
