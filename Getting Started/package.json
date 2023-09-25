@@ -7,7 +7,7 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
-    "@syncfusion/ej2-vue-pdfviewer": "^20.3.60",
+    "@syncfusion/ej2-vue-pdfviewer": "^23.1.36",
     "vue": "^2.5.11"
   },
   "browserslist": [

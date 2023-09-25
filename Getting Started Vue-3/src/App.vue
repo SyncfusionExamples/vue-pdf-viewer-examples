@@ -1,7 +1,6 @@
 <template>
   <ejs-pdfviewer 
     id="pdfViewer" 
-    :serviceUrl="serviceUrl" 
     :documentPath="documentPath"> 
   </ejs-pdfviewer>
 </template>
@@ -19,8 +18,9 @@
 
     data() {
       return {
-        serviceUrl: "https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
-        documentPath: "PDF_Succinctly.pdf"
+        // To set up the **server-backed PDF Viewer** in the app.vue file, include the following serviceUrl. Within the template, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element
+        // serviceUrl: "https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+        documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
       };
     },
     provide: {

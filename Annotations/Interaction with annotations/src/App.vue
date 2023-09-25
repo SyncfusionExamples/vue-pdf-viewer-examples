@@ -1,3 +1,16 @@
+{/*Template to render PDF viewer*/}
+<template>
+ <div id="app">
+  <button id="set">DeleteAnnotation</button>
+  <button id="set1">SelectAnnotation</button>
+  <ejs-pdfviewer 
+    id="pdfViewer" 
+    ref="pdfviewer" 
+    :documentPath="documentPath" 
+    :documentLoad="documentLoad"> 
+  </ejs-pdfviewer>
+  </div>
+</template>
 <script>
 import { 
   PdfViewerComponent, 
@@ -21,9 +34,11 @@ export default {
   },
   data() {
     return {
-        //Sets the PDF document path for initial loading.
-        serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
-        documentPath:'PDF_Succinctly.pdf',
+      // To set up the **server-backed PDF Viewer** in the app.vue file, include the following serviceUrl. Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element
+      //serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+
+      //Sets the PDF document path for initial loading.
+      documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
     };
   },
   provide: {
@@ -55,13 +70,8 @@ export default {
 };
 </script>
 
-{/*Template to render PDF viewer*/}
-<template>
-  <h3>PDF Viewer</h3>
-  <button id="set">DeleteAnnotation</button>
-  <button id="set1">SelectAnnotation</button>
-  <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :serviceUrl="serviceUrl" :documentPath="documentPath" :documentLoad="documentLoad"> </ejs-pdfviewer>
-</template>
+
+
 
 {/*Material theme used for this sample*/}
 <style>
