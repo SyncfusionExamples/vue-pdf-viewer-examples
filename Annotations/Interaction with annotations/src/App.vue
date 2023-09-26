@@ -35,7 +35,7 @@ export default {
   data() {
     return {
       // To set up the **server-backed PDF Viewer** in the app.vue file, include the following serviceUrl. Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element
-      //serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
+      //serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
 
       //Sets the PDF document path for initial loading.
       documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
