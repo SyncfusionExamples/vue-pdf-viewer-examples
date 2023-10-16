@@ -7,7 +7,8 @@
     id="pdfViewer" 
     ref="pdfviewer" 
     :documentPath="documentPath" 
-    :documentLoad="documentLoad"> 
+    :documentLoad="documentLoad"
+    :resourceUrl="resourceUrl"> 
   </ejs-pdfviewer>
   </div>
 </template>
@@ -70,28 +71,17 @@ export default {
 };
 </script>
 
-
-
-
-{/*Material theme used for this sample*/}
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-vue-pdfviewer/styles/material.css';
-
-@import "../node_modules/@syncfusion/ej2-calendars/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css";
-
-.e-tab .e-content .e-item {
-  padding: 10px;
-  text-align: justify;
-  font-size: 12px;
-}
+  @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';  
+  @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';  
+  @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-vue-pdfviewer/styles/material.css';
+  #pdfViewer {
+    height: 640px;
+  }
 </style>
