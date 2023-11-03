@@ -3,8 +3,7 @@
     <ejs-pdfviewer
       id="pdfViewer"
       :documentPath="documentPath"
-      :serviceUrl="serviceUrl"
-      :resourceUrl="resourceUrl">
+      :serviceUrl="serviceUrl">
     </ejs-pdfviewer>
   </div>
 </template>
@@ -18,8 +17,7 @@
     data() {
       return {
         serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
-        documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-        resourceUrl: 'https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib'
+        documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
       };
     },
     provide: {
