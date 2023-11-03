@@ -21,7 +21,7 @@
         // Replace the "localhost:44396" with the actual URL of your server
         serviceUrl: "https://localhost:44396/pdfviewer",
         // Replace  correct PDF Document URL want to load
-        documentPath: "https://cdn.syncfusion.com/content/PDFViewer/flutter-succinctly.pdf"
+        documentPath: "https://cdn.syncfusion.com/content/PDFViewer/pdf-succinctly.pdf"
       };
     },
     provide: {

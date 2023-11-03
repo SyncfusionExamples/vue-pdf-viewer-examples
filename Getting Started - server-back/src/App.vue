@@ -3,43 +3,28 @@
     <ejs-pdfviewer
       id="pdfViewer"
       :documentPath="documentPath"
-      :retryTimeout="retryTimeout" 
-      :retryCount="retryCount" 
-      :resourceUrl="resourceUrl">
+      :serviceUrl="serviceUrl">
     </ejs-pdfviewer>
   </div>
 </template>
 
 <script>
-
-import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
-         Annotation, LinkAnnotation, BookmarkView, ThumbnailView, 
-         Print, TextSelection, TextSearch, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
+  import Vue from 'vue';
+  import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner } from '@syncfusion/ej2-vue-pdfviewer';
   Vue.use(PdfViewerPlugin);
-
   export default {
     name: 'app',
     data() {
       return {
-        // To set up the **server-backed PDF Viewer** in the app.vue file, include the following serviceUrl. Within the template, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element
-        // serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
-        documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-        resourceUrl: 'https://cdn.syncfusion.com/ej2/23.1.41/dist/ej2-pdfviewer-lib',
-        retryTimeout : 10,
-        retryCount : 10
+        serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+        documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
       };
     },
-
     provide: {
-    PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
-                 Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields ]},
-
-
+      PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner]
+    }
   }
-
 </script>
-
 
 <style>
   @import "../node_modules/@syncfusion/ej2-base/styles/material.css";

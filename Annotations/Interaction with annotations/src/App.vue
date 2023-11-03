@@ -1,3 +1,17 @@
+{/*Template to render PDF viewer*/}
+<template>
+ <div id="app">
+  <button id="set">DeleteAnnotation</button>
+  <button id="set1">SelectAnnotation</button>
+  <ejs-pdfviewer 
+    id="pdfViewer" 
+    ref="pdfviewer" 
+    :documentPath="documentPath" 
+    :documentLoad="documentLoad"
+    :resourceUrl="resourceUrl"> 
+  </ejs-pdfviewer>
+  </div>
+</template>
 <script>
 import { 
   PdfViewerComponent, 
@@ -21,9 +35,12 @@ export default {
   },
   data() {
     return {
-        //Sets the PDF document path for initial loading.
-        serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
-        documentPath:'PDF_Succinctly.pdf',
+      // To set up the **server-backed PDF Viewer** in the app.vue file, include the following serviceUrl. Within the `template`, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element
+      //serviceUrl:"https://services.syncfusion.com/vue/production/api/pdfviewer",
+
+      //Sets the PDF document path for initial loading.
+      documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+      resourceUrl: 'https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib'
     };
   },
   provide: {
@@ -55,33 +72,17 @@ export default {
 };
 </script>
 
-{/*Template to render PDF viewer*/}
-<template>
-  <h3>PDF Viewer</h3>
-  <button id="set">DeleteAnnotation</button>
-  <button id="set1">SelectAnnotation</button>
-  <ejs-pdfviewer id="pdfViewer" ref="pdfviewer" :serviceUrl="serviceUrl" :documentPath="documentPath" :documentLoad="documentLoad"> </ejs-pdfviewer>
-</template>
-
-{/*Material theme used for this sample*/}
 <style>
-@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-navigations/styles/material.css";
-@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
-@import '../node_modules/@syncfusion/ej2-vue-pdfviewer/styles/material.css';
-
-@import "../node_modules/@syncfusion/ej2-calendars/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
-@import "../node_modules/@syncfusion/ej2-vue-schedule/styles/material.css";
-
-.e-tab .e-content .e-item {
-  padding: 10px;
-  text-align: justify;
-  font-size: 12px;
-}
+  @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';  
+  @import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';  
+  @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-lists/styles/material.css';
+  @import '../node_modules/@syncfusion/ej2-vue-pdfviewer/styles/material.css';
+  #pdfViewer {
+    height: 640px;
+  }
 </style>
