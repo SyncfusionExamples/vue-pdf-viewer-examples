@@ -4,7 +4,8 @@
       id="pdfViewer"
       :documentPath="documentPath"
       :retryTimeout="retryTimeout" 
-      :retryCount="retryCount" >
+      :retryCount="retryCount" 
+      :resourceUrl="resourceUrl">
     </ejs-pdfviewer>
   </div>
 </template>
@@ -24,6 +25,7 @@ import { PdfViewerPlugin, Toolbar, Magnification, Navigation,
         // To set up the **server-backed PDF Viewer** in the app.vue file, include the following serviceUrl. Within the template, configure the PDF Viewer by adding the `:serviceUrl="serviceUrl"` attribute inside the <div> element
         // serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
         documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+        resourceUrl: 'https://cdn.syncfusion.com/ej2/23.1.41/dist/ej2-pdfviewer-lib',
         retryTimeout : 10,
         retryCount : 10
       };
