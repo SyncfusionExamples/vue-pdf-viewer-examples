@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@syncfusion/ej2-vue-pdfviewer": "^21.2.8",
+    "@syncfusion/ej2-vue-pdfviewer": "*",
     "vue": "^3.2.47"
   },
   "devDependencies": {
