@@ -3,7 +3,9 @@
     <ejs-pdfviewer
       id="pdfViewer"
       :documentPath="documentPath"
-      :resourceUrl="resourceUrl">
+      :resourceUrl="resourceUrl"
+      :pageRenderInitiate ="pageRenderInitiate"
+      :pageRenderComplete="pageRenderComplete">
     </ejs-pdfviewer>
   </div>
 </template>
@@ -22,6 +24,15 @@
     },
     provide: {
       PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner]
+    },
+    methods: {
+    pageRenderInitiate : function (args) {
+      // This method is called when the page rendering starts
+      console.log(args);
+    },
+    pageRenderComplete: function (args) {
+      // This method is called when the page rendering completes
+      console.log(args);
     }
   }
 </script>
