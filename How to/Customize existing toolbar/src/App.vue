@@ -15,7 +15,7 @@
 import Vue from 'vue';
 import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, 
          BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, 
-         Annotation, FormDesigner, FormFields } from '@syncfusion/ej2-vue-pdfviewer';
+         Annotation, FormDesigner, FormFields, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
 import { ComboBox } from "@syncfusion/ej2-dropdowns";
 import { TextBox } from "@syncfusion/ej2-inputs";         
 Vue.use(PdfViewerPlugin);
@@ -64,11 +64,11 @@ export default {
 
   provide: {
     PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, 
-                Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields ]
+                Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields, PageOrganizer ]
   },
 
   methods: {
-    documentLoad: function (args) {
+    documentLoad: function () {
       viewer = this.$refs.pdfviewer.ej2Instances;
     },
     toolbarClick: function (args) {
