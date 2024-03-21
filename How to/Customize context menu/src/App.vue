@@ -15,6 +15,7 @@
   </div>
 </template>
 
+
 <script>
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, 
          BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, 
