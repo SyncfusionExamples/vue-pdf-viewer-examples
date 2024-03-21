@@ -15,7 +15,6 @@
   </div>
 </template>
 
-
 <script>
 import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, 
          BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, 
@@ -25,7 +24,7 @@ import { CheckBoxComponent } from "@syncfusion/ej2-vue-buttons";
 export default {
   components: {
     'ejs-pdfviewer': PdfViewerComponent,
-    'ejs-checkbox': CheckBoxComponent,
+    'ejs-checkbox': CheckBoxComponent
   },
   name: 'app',
   data () {
@@ -67,11 +66,11 @@ export default {
   },
   methods: {
     documentLoad: function () {
-      var viewer = this.$refs.pdfviewer.ej2Instances;
+      var viewer = document.getElementById('pdfViewer').ej2_instances[0];
       viewer.addCustomMenu(this.menuItems, false, false);
     },
     customContextMenuSelect: function (args) {
-      var viewer = this.$refs.pdfviewer.ej2Instances;
+      var viewer = document.getElementById('pdfViewer').ej2_instances[0];
       switch (args.id) {
         case 'search_in_google':
           for (var i = 0; i < viewer.textSelectionModule.selectionRangeArray.length; i++) {
@@ -85,7 +84,7 @@ export default {
           this.lockAnnotations(args);
           break;
         case 'unlock_annotation':
-          this.unlockAnnotations(args);
+         this.unlockAnnotations(args);
           break;
         case 'read_only_true':
           this.setReadOnlyTrue(args);
@@ -99,7 +98,7 @@ export default {
     },
 
     customContextMenuBeforeOpen: function (args) {
-      var viewer = this.$refs.pdfviewer.ej2Instances;
+      var viewer = document.getElementById('pdfViewer').ej2_instances[0];
       for (var i = 0; i < args.ids.length; i++) {
         var search = document.getElementById(args.ids[i]);
         if (search) {
@@ -134,7 +133,7 @@ export default {
     },
 
     lockAnnotations: function (args) {
-      var viewer = this.$refs.pdfviewer.ej2Instances;
+      var viewer = document.getElementById('pdfViewer').ej2_instances[0];
       for (var i = 0; i < viewer.annotationCollection.length; i++) {
         if (viewer.annotationCollection[i].uniqueKey === viewer.selectedItems.annotations[0].id) {
           viewer.annotationCollection[i].annotationSettings.isLock = true;
@@ -146,7 +145,7 @@ export default {
     },
 
     unlockAnnotations: function (args) {
-      var viewer = this.$refs.pdfviewer.ej2Instances;
+      var viewer = document.getElementById('pdfViewer').ej2_instances[0];
       for (var i = 0; i < viewer.annotationCollection.length; i++) {
         if (viewer.annotationCollection[i].uniqueKey === viewer.selectedItems.annotations[0].id) {
           viewer.annotationCollection[i].annotationSettings.isLock = false;
@@ -158,7 +157,7 @@ export default {
     },
 
     setReadOnlyTrue: function (args) {
-      var viewer = this.$refs.pdfviewer.ej2Instances;
+      var viewer = document.getElementById('pdfViewer').ej2_instances[0];
       var selectedFormFields = viewer.selectedItems.formFields;
       for (var i = 0; i < selectedFormFields.length; i++) {
         var selectedFormField = selectedFormFields[i];
@@ -172,7 +171,7 @@ export default {
     },
 
     setReadOnlyFalse: function (args) {
-      var viewer = this.$refs.pdfviewer.ej2Instances;
+      var viewer = document.getElementById('pdfViewer').ej2_instances[0];
       var selectedFormFields = viewer.selectedItems.formFields;
       for (var i = 0; i < selectedFormFields.length; i++) {
         var selectedFormField = selectedFormFields[i];
@@ -186,7 +185,9 @@ export default {
     },
 
     contextmenuHelper: function () {
-      var viewer = this.$refs.pdfviewer.ej2Instances;
+      var viewer = document.getElementById('pdfViewer').ej2_instances[0];
+      var enable = document.getElementById('enable').ej2_instances[0];
+      var position = document.getElementById('position').ej2_instances[0];
       viewer.addCustomMenu(this.menuItems, enable.checked, position.checked);
     },
   }
