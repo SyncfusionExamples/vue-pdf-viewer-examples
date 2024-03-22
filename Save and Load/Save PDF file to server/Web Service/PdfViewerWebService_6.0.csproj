@@ -11,4 +11,8 @@
     <PackageReference Include="Syncfusion.EJ2.PdfViewer.AspNet.Core" Version="*" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\Data\" />
+  </ItemGroup>
+
 </Project>

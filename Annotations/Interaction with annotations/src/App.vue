@@ -47,7 +47,7 @@ export default {
     PdfViewer: [Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields]
   },
   methods: {
-    documentLoad: function (args) {
+    documentLoad: function () {
                    viewer = this.$refs.pdfviewer.ej2Instances;
     //Document loaded with annotation.              
     viewer.annotation.addAnnotation("Ink", {
