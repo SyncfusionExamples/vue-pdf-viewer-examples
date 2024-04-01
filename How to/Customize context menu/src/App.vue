@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <ul>
-      <ejs-checkbox label='Hide Default Context Menu' id="enable" @change="contextmenuHelper" checked="false"></ejs-checkbox>
-      <ejs-checkbox label='Add Custom option at bottom' id="position" @change="contextmenuHelper" checked="false"></ejs-checkbox>
+      <ejs-checkbox label='Hide Default Context Menu' id="enable" @change="contextmenuHelper" ></ejs-checkbox>
+      <ejs-checkbox label='Add Custom option at bottom' id="position" @change="contextmenuHelper" ></ejs-checkbox>
     </ul>
     <ejs-pdfviewer 
       id="pdfViewer" 
