@@ -9,7 +9,6 @@
   },
   "dependencies": {
     "@syncfusion/ej2-vue-pdfviewer": "*",
-    "@syncfusion/ej2-base": "*",
     "core-js": "^3.8.3",
     "vue": "^2.6.14"
   },
