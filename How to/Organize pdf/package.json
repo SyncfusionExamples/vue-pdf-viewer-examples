@@ -11,7 +11,7 @@
     "@syncfusion/ej2-vue-pdfviewer": "*",
     "@syncfusion/ej2-base": "*",
     "core-js": "^3.8.3",
-    "vue": "^2.6.14"
+    "vue": "^2.7.16"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -21,7 +21,7 @@
     "@vue/cli-service": "~5.0.0",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
-    "vue-template-compiler": "^2.6.14"
+    "vue-template-compiler": "^2.7.16"
   },
   "eslintConfig": {
     "root": true,
