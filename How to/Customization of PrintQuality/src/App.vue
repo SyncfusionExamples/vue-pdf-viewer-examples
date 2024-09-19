@@ -4,7 +4,7 @@
       id="pdfViewer"
       :documentPath="documentPath"
       :serviceUrl="serviceUrl"
-      :printScaleFactor=0.5
+      :printScaleFactor="printScaleFactor"
        >
     </ejs-pdfviewer>
   </div>
@@ -23,6 +23,7 @@ import { PdfViewerPlugin, Toolbar, Magnification, Navigation,
       return {
         serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
         documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+        printScaleFactor: 0.5,
       };
     },
 
