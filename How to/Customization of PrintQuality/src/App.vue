@@ -23,6 +23,7 @@ import { PdfViewerPlugin, Toolbar, Magnification, Navigation,
       return {
         serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
         documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+        //By Changing the printScaleFactor value we can adjust the quality of the PDF file.
         printScaleFactor: 0.5,
       };
     },
