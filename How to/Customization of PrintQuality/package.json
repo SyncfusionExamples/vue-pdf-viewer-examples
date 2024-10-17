@@ -1,5 +1,5 @@
 {
-  "name": "quickstart",
+  "name": "printquality",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,7 +10,12 @@
   "dependencies": {
     "@syncfusion/ej2-vue-pdfviewer": "*",
     "core-js": "^3.8.3",
-    "vue": "^2.7.16"
+    "vue": "^3.2.13",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
+    "stream-browserify": "^3.0.0",
+    "util": "^0.12.5",
+    "vm-browserify": "^1.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -19,8 +24,7 @@
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
     "eslint": "^7.32.0",
-    "eslint-plugin-vue": "^8.0.3",
-    "vue-template-compiler": "^2.7.16"
+    "eslint-plugin-vue": "^8.0.3"
   },
   "eslintConfig": {
     "root": true,
@@ -39,6 +43,7 @@
   "browserslist": [
     "> 1%",
     "last 2 versions",
-    "not dead"
+    "not dead",
+    "not ie 11"
   ]
 }
