@@ -21,7 +21,7 @@
     data() {
       return {
         documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
-        serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer"
+        serviceUrl: "https://localhost:44396/pdfviewer"
 
       };
     },
