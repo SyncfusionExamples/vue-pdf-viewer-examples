@@ -1,4 +1,4 @@
-# quickstart
+# customize-toolbar
 
 ## Project setup
 ```

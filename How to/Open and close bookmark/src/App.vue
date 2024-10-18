@@ -12,14 +12,16 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, 
          LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
          Print, TextSelection, TextSearch, FormFields, FormDesigner,PageOrganizer  } from '@syncfusion/ej2-vue-pdfviewer';
-Vue.use(PdfViewerPlugin);
 
 export default {
-  name: 'app',
+  name: 'App',
+  components: {
+    "ejs-pdfviewer": PdfViewerComponent
+  },
   data () {
     return {
       resourceUrl:"https://cdn.syncfusion.com/ej2/24.1.41/dist/ej2-pdfviewer-lib",
