@@ -1,8 +1,9 @@
 <template>
   <ejs-pdfviewer 
     id="pdfViewer" 
-    :serviceUrl="serviceUrl" 
-    :documentPath="documentPath">
+    :documentPath="documentPath"
+    :style="{ height: '800px', width: '1200px' }"
+    :resourceUrl="resourceUrl">
   </ejs-pdfviewer>
 </template>
 
@@ -12,20 +13,21 @@
 
   export default {
     name: 'App',
-
+    // Declaring component and its directives
     components: {
       "ejs-pdfviewer": PdfViewerComponent
     },
 
     data() {
       return {
-        serviceUrl: "https://localhost:44396/pdfviewer",
-        documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+        resourceUrl: 'https://cdn.syncfusion.com/ej2/23.1.43/dist/ej2-pdfviewer-lib'
+
       };
     },
     provide: {
       PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
-                   Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields, PageOrganizer ]
+                   Print, TextSelection, TextSearch, Annotation, FormDesigner, FormField, PageOrganizer ]
     }
   }
 </script>

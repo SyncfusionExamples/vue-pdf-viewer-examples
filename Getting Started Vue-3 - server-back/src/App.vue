@@ -1,8 +1,9 @@
 <template>
   <ejs-pdfviewer 
     id="pdfViewer" 
-    :serviceUrl="serviceUrl" 
-    :documentPath="documentPath">
+    :documentPath="documentPath"
+    :style="{ height: '800px', width: '1200px' }"
+    :serviceUrl="serviceUrl">
   </ejs-pdfviewer>
 </template>
 
@@ -12,15 +13,16 @@
 
   export default {
     name: 'App',
-
+    // Declaring component and its directives
     components: {
       "ejs-pdfviewer": PdfViewerComponent
     },
 
     data() {
       return {
-        serviceUrl: "https://localhost:44396/pdfviewer",
-        documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
+        documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+        serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer"
+
       };
     },
     provide: {
