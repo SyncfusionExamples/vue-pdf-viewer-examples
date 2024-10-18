@@ -1,4 +1,4 @@
-# quickstart
+# restrict-zoom-on-mobile
 
 ## Project setup
 ```
