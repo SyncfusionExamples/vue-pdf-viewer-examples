@@ -1,4 +1,4 @@
-# quickstart
+# getting-started-standalone
 
 ## Project setup
 ```

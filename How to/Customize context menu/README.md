@@ -1,4 +1,4 @@
-# quickstart
+# context-menu
 
 ## Project setup
 ```

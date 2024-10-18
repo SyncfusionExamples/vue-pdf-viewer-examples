@@ -19,7 +19,7 @@
 
     data() {
       return {
-        serviceUrl: "https://services.syncfusion.com/vue/production/api/pdfviewer",
+        serviceUrl: "https://localhost:44396/pdfviewer",
         documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
       };
     },

@@ -10,12 +10,13 @@
 </template>
 
 <script>
-  import Vue from 'vue';
-  import { PdfViewerPlugin, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, 
+  import { PdfViewerComponent, Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, 
            ThumbnailView, Print, TextSelection, TextSearch, Annotation, FormFields, FormDesigner, PageOrganizer } from '@syncfusion/ej2-vue-pdfviewer';
-  Vue.use(PdfViewerPlugin);
   export default {
-    name: 'app',
+    name: 'App',
+    components: {
+    "ejs-pdfviewer": PdfViewerComponent
+  },
     data() {
       return {
         // Replace the "localhost:44396" with the actual URL of your server

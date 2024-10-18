@@ -1,4 +1,4 @@
-# quickstart
+# custom-fonts
 
 ## Project setup
 ```
