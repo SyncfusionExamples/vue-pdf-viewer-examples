@@ -21,6 +21,7 @@
     data() {
       return {
         documentPath: "https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+        // Replace the "localhost:44396" with the actual URL of your server
         serviceUrl: "https://localhost:44396/pdfviewer"
 
       };

@@ -27,7 +27,7 @@
     },
     provide: {
       PdfViewer: [ Toolbar, Magnification, Navigation, LinkAnnotation, BookmarkView, ThumbnailView,
-                   Print, TextSelection, TextSearch, Annotation, FormDesigner, FormField, PageOrganizer ]
+                   Print, TextSelection, TextSearch, Annotation, FormDesigner, FormFields, PageOrganizer ]
     }
   }
 </script>
