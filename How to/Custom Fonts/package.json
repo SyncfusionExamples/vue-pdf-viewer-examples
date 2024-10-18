@@ -10,8 +10,13 @@
   "dependencies": {
     "@syncfusion/ej2-vue-pdfviewer": "*",
     "@syncfusion/ej2-base": "*",
+    "buffer": "^6.0.3",
     "core-js": "^3.8.3",
-    "vue": "^2.6.14"
+    "crypto-browserify": "^3.12.0",
+    "stream-browserify": "^3.0.0",
+    "util": "^0.12.5",
+    "vm-browserify": "^1.1.2",
+    "vue": "^3.2.13"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -20,8 +25,7 @@
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
     "eslint": "^7.32.0",
-    "eslint-plugin-vue": "^8.0.3",
-    "vue-template-compiler": "^2.6.14"
+    "eslint-plugin-vue": "^8.0.3"
   },
   "eslintConfig": {
     "root": true,
@@ -40,6 +44,7 @@
   "browserslist": [
     "> 1%",
     "last 2 versions",
-    "not dead"
+    "not dead",
+    "not ie 11"
   ]
 }

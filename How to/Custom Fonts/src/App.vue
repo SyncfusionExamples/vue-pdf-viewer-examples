@@ -11,20 +11,20 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { PdfViewerPlugin, Toolbar, Magnification, Navigation, 
+import { PdfViewerComponent, Toolbar, Magnification, Navigation, 
          LinkAnnotation, BookmarkView, Annotation, ThumbnailView, 
          Print, TextSelection, TextSearch, FormFields, FormDesigner,PageOrganizer  } from '@syncfusion/ej2-vue-pdfviewer';
-import  {Browser} from '@syncfusion/ej2-base';
-Vue.use(PdfViewerPlugin);
 
 export default {
-  name: 'app',
+  name: 'App',
+  components: {
+    "ejs-pdfviewer": PdfViewerComponent
+  },
   data () {
     return {
-      resourceUrl:window.location.origin + "/public/ej2-pdfviewer-lib";
-      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf"
-      customFonts: ["simsun.ttc", "sumsinb.ttf", "arial/arialbd.ttf", "arial/arial.ttf", "BKANT.TTF", "calibri.ttf", "GARA.TTF", "GARAIT.TTF", "msgothic.ttc", "trebuc.ttf", "wingding.ttf"];
+      resourceUrl:window.location.origin + "/ej2-pdfviewer-lib",
+      documentPath:"https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf",
+      customFonts: ["simsun.ttc", "sumsinb.ttf", "arial/arialbd.ttf", "arial/arial.ttf", "BKANT.TTF", "calibri.ttf", "GARA.TTF", "GARAIT.TTF", "msgothic.ttc", "trebuc.ttf", "wingding.ttf"]
     };
   },
   provide: {
