@@ -5,7 +5,7 @@
       ref="pdfviewer"
       :documentPath="documentPath"
       :enableLocalStorage="true"
-      :serviceUrl="serviceUrl"
+      :resourceUrl="resourceUrl"
       style="height: 640px;"
     >
     </ejs-pdfviewer>
@@ -33,8 +33,8 @@ export default {
   },
   data() {
     return {
-        serviceUrl:"https://ej2services.syncfusion.com/production/web-services/api/pdfviewer",
-        documentPath:"PDF_Succinctly.pdf"
+        documentPath:'https://cdn.syncfusion.com/content/pdf/pdf-succinctly.pdf',
+        resourceUrl: 'https://cdn.syncfusion.com/ej2/28.1.33/dist/ej2-pdfviewer-lib'
     };
   },
   provide: {
