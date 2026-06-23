@@ -1,5 +1,5 @@
 # vue-pdf-viewer-examples
-This repository contains examples of Syncfusion&reg; PDF Viewer (Web) control.
+This repository contains examples of PDF Viewer (Web) control.
 
 ## Key features
 The Vue PDF Viewer component allows to view, print, and annotate the PDF files in your Vue applications and its key features are,
