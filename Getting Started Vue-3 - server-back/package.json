@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "@syncfusion/ej2-vue-pdfviewer": "*",
-    "vue": "^3.2.47"
+    "vue": "^3.2.47",
+    "@syncfusion/ej2-tailwind3-theme": "*"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.1.0",
