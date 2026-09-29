@@ -15,7 +15,8 @@
     "stream-browserify": "^3.0.0",
     "util": "^0.12.5",
     "vm-browserify": "^1.1.2",
-    "vue": "^3.2.13"
+    "vue": "^3.2.13",
+    "@syncfusion/ej2-tailwind3-theme": "*"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",

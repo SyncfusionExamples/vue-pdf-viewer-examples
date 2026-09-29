@@ -10,7 +10,8 @@
   "dependencies": {
     "@syncfusion/ej2-vue-pdfviewer": "^28.2.4",
     "core-js": "^3.8.3",
-    "vue": "^3.0.0-alpha.0"
+    "vue": "^3.0.0-alpha.0",
+    "@syncfusion/ej2-tailwind3-theme": "*"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
