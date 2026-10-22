@@ -1,0 +1,21 @@
+{
+  "name": "syncfusion-vue-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.5.42",
+    "vue-router": "^4.3.0",
+    "@syncfusion/ej2-vue-pdfviewer": "*",
+    "@syncfusion/ej2-tailwind3-theme": "*"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.8",
+    "vite": "^8.3.0"
+  }
+}
