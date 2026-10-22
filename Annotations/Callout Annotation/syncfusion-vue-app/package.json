@@ -10,10 +10,9 @@
   },
   "dependencies": {
     "vue": "^3.5.42",
-    "@syncfusion/ej2-material3-theme": "~34.2.2",
     "vue-router": "^4.3.0",
-    "@syncfusion/ej2-vue-pdfviewer": "~34.2.2",
-    "@syncfusion/ej2-fluent2-theme": "~34.2.2"
+    "@syncfusion/ej2-vue-pdfviewer": "*",
+    "@syncfusion/ej2-tailwind3-theme": "*"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.8",
