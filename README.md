@@ -21,12 +21,14 @@ The Vue PDF Viewer component allows to view, print, and annotate the PDF files i
 ## Samples Links
 
 * <a href="Annotations">Annotations</a>
+* <a href="Forms">Forms</a>
 * <a href="Getting Started - server-back">Getting Started - Server Back</a>
 * <a href="Getting Started - Standalone">Getting Started - Standalone</a>
 * <a href="Getting Started Vue-3 - server-back">Getting Started Vue-3 - Server Back</a>
 * <a href="Getting Started Vue-3 - Standalone">Getting Started Vue-3 - Standalone</a>
 * <a href="How to">How to</a>
 * <a href="Save and Load">Save and Load</a>
+* <a href="Semantic Text Comparison">Semantic Text Comparison</a>
 
 ## Support and feedback
 
