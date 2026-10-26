@@ -31,6 +31,7 @@
         :resourceUrl="resourceUrl"
         :enableCollaborativeEditing="true"
         @resourcesLoaded="handleResourcesLoaded"
+        @documentLoad="documentLoad"
         @documentChanged="handleDocumentChanged"
         @created="handleViewerCreated"
         style="height: 100%; width: 100%;"
@@ -49,7 +50,7 @@ import { PdfViewerAdapter } from './pdfViewerAdapter';
 
 // Available user list for demo purposes
 const userList = ['RIO', 'JOHN', 'MAXY', 'SHAI', 'SRI'];
-const SERVICE_URL = 'http://localhost:8081/';
+const SERVICE_URL = 'https://localhost:5001/';
 
 export default {
   name: 'App',
@@ -245,7 +246,13 @@ export default {
         throw error;
       }
     },
-
+    /**
+    * Applies pending operations to the document after it has been loaded.
+    * This handles applying initial state snapshots (annotations, form fields, page organizer).
+    */
+    documentLoad(){
+      this.adapter.updatePendingOperations();
+    },
     /**
      * Handler for viewer.resourcesLoaded event
      * 
@@ -283,8 +290,11 @@ export default {
 
               // Step 2: Create and configure CollaborationClient
               const client = new CollaborationClient(adapter, {
-                serviceUrl: SERVICE_URL,
-                connectionType: 'websocket',
+                 serviceUrl: SERVICE_URL,
+              // USE BELOW IF YOU USE NODE JS WEB SERVICE
+              // connectionType: 'websocket',
+              // USE BELOW IF YOU USE CORE WEB SERVICE
+                connectionType: 'signalr',
                 currentUser: this.currentUser,
                 onUserJoined: (user) => {
                   console.log('[App] User joined collaboration:', user);
