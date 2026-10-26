@@ -119,7 +119,7 @@ The client is configured to use this URL in `Client/src/App.vue` through the `SE
 In a second terminal:
 
 ```bash
-cd Client
+cd Client/pdf-viewer
 npm install
 npm run serve
 ```
